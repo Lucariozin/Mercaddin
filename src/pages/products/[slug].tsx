@@ -1,4 +1,4 @@
-import * as Styled from './_ProductPageStyles';
+import * as Styled from '../../styles/_ProductPageStyles';
 
 import Router, { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps } from "next";
