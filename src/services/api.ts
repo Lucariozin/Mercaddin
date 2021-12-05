@@ -1,6 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  // baseURL: `${process.env.VERCEL_URL}/api/`,
-  baseURL: `https://mercaddin.vercel.app/api/`,
+  baseURL: `${process.env.NEXT_PUBLIC_APLICATION_URL}/api/`,
 });

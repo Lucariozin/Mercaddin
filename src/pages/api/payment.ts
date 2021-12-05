@@ -38,8 +38,8 @@ const Payment = async (req: NextApiRequest, res: NextApiResponse) => {
     line_items,
     mode: 'payment',
     allow_promotion_codes: false,
-    success_url: `${process.env.NEXT_PUBLIC_VERCEL_URL}?clear=true`,
-    cancel_url: process.env.NEXT_PUBLIC_VERCEL_URL,
+    success_url: `${process.env.NEXT_PUBLIC_APLICATION_URL}?clear=true`,
+    cancel_url: process.env.NEXT_PUBLIC_APLICATION_URL,
   });
 
   return res.status(200).json({
