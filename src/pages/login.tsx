@@ -25,7 +25,7 @@ export default function LoginPage() {
         </Styled.LogoContainer>
 
         <Styled.LoginContainer>
-          <LoginForm successUrl={query ? `${process.env.NEXT_PUBLIC_APLICATION_URL}/${query.back}` : `${process.env.NEXT_PUBLIC_APLICATION_URL}`} />
+          <LoginForm successUrl={query.back ? `${process.env.NEXT_PUBLIC_APLICATION_URL}/${query.back}` : `${process.env.NEXT_PUBLIC_APLICATION_URL}`} />
         </Styled.LoginContainer>
 
       </Styled.Wrapper>

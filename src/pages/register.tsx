@@ -25,7 +25,7 @@ export default function RegisterPage() {
         </Styled.LogoContainer>
 
         <Styled.LoginContainer>
-          <RegisterForm successUrl={query ? `${process.env.NEXT_PUBLIC_APLICATION_URL}/${query.back}` : `${process.env.NEXT_PUBLIC_APLICATION_URL}`} />
+          <RegisterForm successUrl={query.back ? `${process.env.NEXT_PUBLIC_APLICATION_URL}/${query.back}` : `${process.env.NEXT_PUBLIC_APLICATION_URL}`} />
         </Styled.LoginContainer>
 
       </Styled.Wrapper>
