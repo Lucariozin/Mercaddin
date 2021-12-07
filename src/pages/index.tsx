@@ -1,5 +1,6 @@
 import { GetServerSideProps } from "next"
 import { getSession } from "next-auth/client";
+import Head from "next/head";
 import { useEffect } from "react";
 
 import { Header } from "../components/Header";
@@ -25,7 +26,11 @@ export default function Home({ products, itemsOfCart }: HomeProps) {
   }, [itemsOfCart, setProducts]);
 
   return (
-    <> 
+    <>
+      <Head>
+        <title>Mercaddin | Ofertas incríveis</title>
+      </Head>
+
       <Header />
       <ProductsContainer products={products} />
     </>

@@ -1,5 +1,6 @@
 import * as Styled from '../styles/RegisterPageStyles';
 
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import { AiFillShopping } from 'react-icons/ai';
@@ -10,6 +11,10 @@ export default function LoginPage() {
 
   return (
     <Styled.Container>
+      <Head>
+        <title>Faça Login e Comece Suas Compras | Mercaddin</title>
+      </Head>
+
       <Styled.Wrapper>
 
         <Styled.LogoContainer>

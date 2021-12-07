@@ -1,6 +1,7 @@
 import * as Styled from '../styles/CartPageStyles';
 
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 import { GetServerSideProps } from 'next';
 import { getSession } from 'next-auth/client';
 
@@ -84,6 +85,10 @@ export default function CartPage() {
 
   return (
     <>
+      <Head>
+        <title>Carrinho De Compras</title>
+      </Head>
+
       <Header />
 
       <Styled.Container>

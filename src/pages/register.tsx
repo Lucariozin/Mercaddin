@@ -1,5 +1,6 @@
 import * as Styled from '../styles/RegisterPageStyles';
 
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import { AiFillShopping } from 'react-icons/ai';
@@ -10,6 +11,10 @@ export default function RegisterPage() {
 
   return (
     <Styled.Container>
+      <Head>
+        <title>Cadastre-se Agora | Mercaddin</title>
+      </Head>
+
       <Styled.Wrapper>
 
         <Styled.LogoContainer>

@@ -2,6 +2,7 @@ import * as Styled from '../../styles/_ProductPageStyles';
 
 import Router, { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from 'next/head';
 import { toast } from "react-toastify";
 
 import { api } from "../../services/api";
@@ -95,6 +96,10 @@ export default function ProductPage({
 
   return (
     <>
+      <Head>
+        <title>{slug} | Mercaddin</title>
+      </Head>
+
       <Header />
 
       <Styled.Container>
