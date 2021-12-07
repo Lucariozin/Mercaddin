@@ -97,7 +97,7 @@ export default function ProductPage({
   return (
     <>
       <Head>
-        <title>{slug} | Mercaddin</title>
+        <title>{name} | Mercaddin</title>
       </Head>
 
       <Header />
