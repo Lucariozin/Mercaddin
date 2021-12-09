@@ -20,4 +20,10 @@ export const NumberOfProductsOnCart = styled.span`
   position: relative;
   left: -0.8rem;
   top: -0.3rem;
+
+  @media (max-width: 600px) {
+    height: 1.5rem;
+    font-size: 1.2rem;
+    padding-top: 0.3rem;
+  }
 `;

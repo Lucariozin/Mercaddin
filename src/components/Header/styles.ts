@@ -10,6 +10,10 @@ export const Container = styled.header`
 
   background-color: var(--orange-400);
   box-shadow: 0 0 4rem 0.1rem rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 750px) {
+    height: 8rem;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -22,11 +26,26 @@ export const Wrapper = styled.div`
   align-items: center;
 `;
 
+export const LogoAndSearchWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
   margin-left: 0.5rem;
+  margin-right: 2rem;
+  
+  @media (max-width: 750px) {
+    svg {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    margin-right: 0;
+  }
 `;
 
 export const LogoText = styled.h1`
@@ -36,6 +55,15 @@ export const LogoText = styled.h1`
 
   position: relative;
   top: 5px;
+
+  @media (max-width: 750px) {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const SearchContainer = styled.div`
@@ -50,6 +78,16 @@ export const SearchContainer = styled.div`
 
   display: flex;
   gap: 1rem;
+
+  @media (max-width: 750px) {
+    height: 3rem;
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    margin-right: 1rem;
+    height: 2.5rem;
+  }
 `;
 
 export const SearchInput = styled.input`
@@ -60,6 +98,10 @@ export const SearchInput = styled.input`
   background-color: var(--gray-50);
   color: var(--gray-700);
   border-radius: 100rem;
+
+  @media (max-width: 600px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const SearchButton = styled.button`
@@ -83,17 +125,49 @@ export const SearchButton = styled.button`
 `;
 
 export const CartContainer = styled.div`
-  margin: 0 0 0 auto;
+  margin: 0 2rem 0 auto;
   padding-left: 2rem;
   width: 5rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  @media (max-width: 750px) {
+    padding-left: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 0;
+    margin-right: 0;
+  }
 `;
 
 export const LoginContainer = styled.div`
   display: flex;
-  margin: 0 2rem 0 3rem;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 1rem;
+`;
+
+export const LoginLinks = styled.div`
+  display: flex;
+  margin-right: 1rem;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
+`;
+
+export const LinkSpacing = styled.span`
+  display: none;
+  width: 1rem;
+  margin: 0.5rem auto;
+  height: 0.2rem;
+  background-color: var(--gray-50);
+
+  @media (max-width: 400px) {
+    display: block;
+  }
 `;
 
 export const RegisterLink = styled.a`
@@ -112,11 +186,34 @@ export const RegisterLink = styled.a`
     height: 2.5rem;
     background-color: white;
     margin: 0 1rem 0 1rem;
+
+    @media (max-width: 750px) {
+      position: relative;
+      top: -0.3rem;
+      margin-bottom: -1rem;
+    }
+
+    @media (max-width: 600px) {
+      height: 1.5rem;
+      top: 0;
+    }
+
+    @media (max-width: 400px) {
+      display: none;
+    }
   }
 
   &:hover {
     color: var(--orange-300);
     filter: brightness(1.1);
+  }
+
+  @media (max-width: 750px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
   }
 `;
 
@@ -132,11 +229,22 @@ export const LoginLink = styled.a`
     color: var(--orange-300);
     filter: brightness(1.1);
   }
+
+  @media (max-width: 750px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 export const WelcomeUserContainer = styled.div`
   display: flex;
-  margin-left: 2rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const UserContainer = styled.div`
@@ -150,6 +258,10 @@ export const WelcomeMessage = styled.span`
   font-size: 1.6rem;
   font-weight: 500;
   color: var(--gray-50);
+
+  @media (max-width: 855px) {
+    display: none;
+  }
 `;
 
 export const UserImg = styled.img`
@@ -177,5 +289,12 @@ export const QuitButton = styled.button`
   &:hover {
     background-color: var(--orange-500);
     filter: brightness(1.1);
+  }
+
+  @media (max-width: 600px) {
+    height: 2rem;
+    font-size: 1.2rem;
+    padding: 0 0.8rem 0 0.8rem;
+    margin: 0.5rem 1rem 0.2rem 1rem;
   }
 `;

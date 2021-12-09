@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 25rem;
+  max-width: 25rem;
+  width: 100%;
   height: 38rem;
   display: flex;
   flex-direction: column;
@@ -14,6 +15,28 @@ export const Container = styled.div`
 
   &:hover {
     border: 2px solid var(--orange-500);
+  }
+
+  @media (max-width: 985px) {
+    height: 36rem;
+  }
+
+  @media (max-width: 855px) {
+    height: 34rem;
+  }
+
+  @media (max-width: 850px) {
+    width: 19rem;
+    height: 30rem;
+  }
+
+  @media (max-width: 430px) {
+    width: 100%;
+    height: 30rem;
+  }
+
+  @media (max-width: 375px) {
+    height: 26rem;
   }
 `;
 
@@ -37,8 +60,19 @@ export const ImgContainer = styled.div`
 
 export const Name = styled.span`
   font-size: 1.8rem;
-
   font-weight: 600;
+
+  @media (max-width: 950px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 820px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const Separation = styled.span`
@@ -48,12 +82,23 @@ export const Separation = styled.span`
   margin: 1.5rem auto;
 
   background-color: var(--orange-500);
+
+  @media (max-width: 375px) {
+    margin: 1rem auto;
+  }
 `;
 
 export const Price = styled.span`
   font-size: 1.6rem;
-
   font-weight: 600;
+
+  @media (max-width: 950px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const PriceContainer = styled.div`
@@ -70,6 +115,10 @@ export const Discount = styled.span`
   background-color: var(--orange-100);
   border-radius: 0.5rem;
   margin: 0 1rem 0 1rem;
+
+  @media (max-width: 950px) {
+    font-size: 1rem;
+  }
 `;
 
 export const OldPrice = styled.span`
@@ -78,4 +127,12 @@ export const OldPrice = styled.span`
   text-decoration: line-through;
   color: var(--gray-400);
   margin-left: auto;
+
+  @media (max-width: 980px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 885px) {
+    display: none;
+  }
 `;

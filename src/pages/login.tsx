@@ -1,4 +1,4 @@
-import * as Styled from '../styles/RegisterPageStyles';
+import * as Styled from '../styles/LoginPageStyles';
 
 import Head from 'next/head';
 import { useRouter } from 'next/router';

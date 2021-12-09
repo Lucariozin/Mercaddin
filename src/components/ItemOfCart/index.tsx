@@ -42,14 +42,16 @@ export function ItemOfCart({
   return (
     <Styled.Container>
       <Styled.ProductContainer>
-        <CheckBox isActive={isSelected} setIsActive={toggleIsSelected} />
+        <Styled.CheckboxAndImg>
+          <CheckBox isActive={isSelected} setIsActive={toggleIsSelected} />
 
-        <Styled.ImgContainer>
-          <Styled.ProductImg
-            style={{ 'backgroundImage': `url(${productImg})` }}
-            aria-label={`Imagem de ${productName}`}
-          />
-        </Styled.ImgContainer>
+          <Styled.ImgContainer>
+            <Styled.ProductImg
+              style={{ 'backgroundImage': `url(${productImg})` }}
+              aria-label={`Imagem de ${productName}`}
+            />
+          </Styled.ImgContainer>
+        </Styled.CheckboxAndImg>
 
         <Styled.ProductName>{productName}</Styled.ProductName>
       </Styled.ProductContainer>
@@ -58,11 +60,13 @@ export function ItemOfCart({
         
         <Styled.OldPrice>{oldPrice}</Styled.OldPrice>
         
-        {discount > 0 && (
-          <Styled.Discount>{discount}%</Styled.Discount>
-        )}
+        <Styled.PriceAndDiscount>
+          {discount > 0 && (
+            <Styled.Discount>{discount}%</Styled.Discount>
+          )}
 
-        <Styled.Price>{price}</Styled.Price>
+          <Styled.Price>{price}</Styled.Price>
+        </Styled.PriceAndDiscount>
 
         <Styled.AmountProductsContainer>
           <AmountProducts

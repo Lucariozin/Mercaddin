@@ -46,8 +46,6 @@ export default function CartPage() {
         closeOnClick: false,
         pauseOnHover: false,
         style: {
-          width: '40rem',
-          right: '10rem',
           textAlign: 'center',
           fontSize: '2rem',
           fontWeight: 600,
@@ -139,15 +137,17 @@ export default function CartPage() {
                 <Styled.SelectAll>Selecionar Tudo ({numberOfProductsInCart})</Styled.SelectAll>
               </Styled.SelectAllContainer>
               
-              <Styled.TotalPriceContainer>
-                Total ({selectedProducts.length} itens):
+              <Styled.TotalPriceAndPaymentButton>
+                <Styled.TotalPriceContainer>
+                  Total ({selectedProducts.length} itens):
 
-                <Styled.TotalPrice>{totalPrice}</Styled.TotalPrice>
-              </Styled.TotalPriceContainer>
+                  <Styled.TotalPrice>{totalPrice}</Styled.TotalPrice>
+                </Styled.TotalPriceContainer>
 
-              <Styled.GoToPaymentButton type="button" onClick={handleGoToPayment}>
-                Continuar
-              </Styled.GoToPaymentButton>
+                <Styled.GoToPaymentButton type="button" onClick={handleGoToPayment}>
+                  Continuar
+                </Styled.GoToPaymentButton>
+              </Styled.TotalPriceAndPaymentButton>
 
             </Styled.GoToPaymentContainer>
           )}

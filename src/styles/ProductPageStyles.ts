@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,10 +11,19 @@ export const Wrapper = styled.main`
   max-width: 1000px;
   width: 100%;
   margin: 0 1rem 0 1rem;
-  margin-top: 22rem;
+  margin-top: 13rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   gap: 10rem;
+
+  @media (max-width: 880px) {
+    gap: 5rem;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
 `;
 
 export const ImgContainer = styled.div``;
@@ -31,6 +39,12 @@ export const CurrentImgContainer = styled.div`
   overflow: hidden;
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 650px) {
+    width: 26rem;
+    height: 26rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const AllImgsContainer = styled.div`
@@ -38,20 +52,37 @@ export const AllImgsContainer = styled.div`
   gap: 2.5rem;
 `;
 
-export const DetailsContainer = styled.div``;
+export const DetailsContainer = styled.div`
+  max-width: 50rem;
+`;
 
 export const ProductName = styled.h2`
   font-size: 3rem;
   font-weight: 600;
+
+  @media (max-width: 800px) {
+    font-size: 2rem;
+  }
 `;
 
 export const ProductDescription = styled.p`
   font-size: 1.4rem;
   line-height: 2.5rem;
   color: var(--gray-600);
+
+  @media (max-width: 800px) {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
 `;
 
-export const PriceContainer = styled.div``;
+export const PriceContainer = styled.div`
+  @media (max-width: 800px) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+`;
 
 export const PriceWithDiscountContainer = styled.div`
   display: flex;
@@ -79,15 +110,25 @@ export const OldPrice = styled.span`
   text-decoration: line-through;
   color: var(--gray-400);
   margin-left: auto;
+
+  @media (max-width: 800px) {
+    margin-left: 2rem;
+  }
 `;
 
 export const AddToCartContainer = styled.div`
   display: flex;
   gap: 1.5rem;
   margin-top: 3rem;
+  margin-right: 1rem;
+
+  @media (max-width: 300px) {
+    gap: 1rem;
+  }
 `;
 
 export const AddToCartButton = styled.button`
+  height: 4rem;
   border: none;
   background-color: var(--orange-400);
   border-radius: 0.8rem;
@@ -106,5 +147,13 @@ export const AddToCartButton = styled.button`
   &:hover {
     background-color: var(--orange-500);
     filter: brightness(1.1);
+  }
+
+  @media (max-width: 830px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 1.2rem;
   }
 `;

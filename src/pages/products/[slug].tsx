@@ -1,4 +1,4 @@
-import * as Styled from '../../styles/_ProductPageStyles';
+import * as Styled from '../../styles/ProductPageStyles';
 
 import Router, { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -82,8 +82,6 @@ export default function ProductPage({
         closeOnClick: false,
         pauseOnHover: false,
         style: {
-          width: '40rem',
-          right: '10rem',
           textAlign: 'center',
           fontSize: '2rem',
           fontWeight: 600,

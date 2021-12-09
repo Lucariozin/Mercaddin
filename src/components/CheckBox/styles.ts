@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 2rem;
-  height: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
   border-radius: 0.3rem;
   background-color: var(--gray-300);
   border: 0.1rem solid var(--gray-400);
