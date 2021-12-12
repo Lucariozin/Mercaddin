@@ -1,4 +1,6 @@
 import * as Styled from '../../styles/ProductPageStyles';
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import { HiOutlineShoppingCart } from 'react-icons/hi';
 
 import Router, { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -7,15 +9,15 @@ import { toast } from "react-toastify";
 
 import { api } from "../../services/api";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSession } from 'next-auth/client';
 import { useCart } from "../../hooks/useCart";
 
-import { HiOutlineShoppingCart } from 'react-icons/hi';
 import { AllImagesContainer } from "../../components/AllImagesContainer";
 import { DisplayOfImagesModal } from "../../components/DisplayOfImagesModal";
 import { Header } from "../../components/Header";
 import { AmountProducts } from "../../components/AmountProducts";
+
 import { ProductType } from '../../types/Product';
 
 interface ProductPageProps {
@@ -40,6 +42,7 @@ export default function ProductPage({
   slug
 }: ProductPageProps) {
 
+  const [indexOfCurrentImg, setIndexOfCurrentImg] = useState(0);
   const [currentImgSrc, setCurrentImgSrc] = useState(imgArray[0]);
   const [amountProducts, setAmountProducts] = useState(1);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -50,7 +53,12 @@ export default function ProductPage({
 
 
   const closeModal = () => setModalIsOpen(false);
-  const openModal = () => setModalIsOpen(true);
+
+  const openModal = () => {
+    if (window.screen.width > 500) {
+      setModalIsOpen(true);
+    }
+  };
 
   function handleSetCurrentImgSrc(src: string) {
     if (src === currentImgSrc) return;
@@ -92,6 +100,33 @@ export default function ProductPage({
     }
   }
 
+  function handleNextImg() {
+    if (indexOfCurrentImg + 1 >= imgArray.length) {
+      return setCurrentImgSrc(imgArray[0]);
+    };
+
+    const nextImg = imgArray[indexOfCurrentImg + 1];
+    setCurrentImgSrc(nextImg);
+  }
+
+  function handleBackImg() {
+    if (indexOfCurrentImg - 1 < 0) {
+      return setCurrentImgSrc(imgArray[imgArray.length - 1]);
+    };
+
+    const backImg = imgArray[indexOfCurrentImg - 1];
+    setCurrentImgSrc(backImg);
+  }
+
+
+  useEffect(() => {
+    imgArray.forEach((imgSrc, index) => {
+      if (imgSrc === currentImgSrc) setIndexOfCurrentImg(index);
+    });
+    
+  }, [imgArray, currentImgSrc]);
+
+
   return (
     <>
       <Head>
@@ -112,13 +147,20 @@ export default function ProductPage({
         <Styled.Wrapper>
           
           <Styled.ImgContainer>
+            <Styled.BackImgButton type="button" onClick={handleBackImg}>
+              <MdKeyboardArrowLeft size="40" />
+            </Styled.BackImgButton>
+
             <Styled.CurrentImgContainer
               style={{ 'backgroundImage': `url(${currentImgSrc})` }}
               onClick={openModal}
               aria-label="Imagem do produto"
             >
-              
             </Styled.CurrentImgContainer>
+
+            <Styled.NextImgButton type="button" onClick={handleNextImg}>
+              <MdKeyboardArrowRight size="40" />
+            </Styled.NextImgButton>
 
             <AllImagesContainer 
               imgArray={imgArray}

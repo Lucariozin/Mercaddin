@@ -10,23 +10,31 @@ export const Container = styled.div`
 export const Wrapper = styled.main`
   max-width: 1000px;
   width: 100%;
-  margin: 0 1rem 0 1rem;
-  margin-top: 13rem;
+  margin: 13rem 1rem 0 1rem;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
   gap: 10rem;
 
-  @media (max-width: 880px) {
+  @media (max-width: 950px) {
     gap: 5rem;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 820px) {
     flex-direction: column;
+  }
+
+  @media (max-width: 500px) {
+    margin: 8rem 0 3rem 0;
+    gap: 0;
   }
 `;
 
-export const ImgContainer = styled.div``;
+export const ImgContainer = styled.div`
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+`;
 
 export const CurrentImgContainer = styled.div`
   width: 37rem;
@@ -40,10 +48,22 @@ export const CurrentImgContainer = styled.div`
   background-size: cover;
   background-position: center;
 
-  @media (max-width: 650px) {
-    width: 26rem;
-    height: 26rem;
-    margin-bottom: 1.5rem;
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 42rem;
+    border-radius: 0;
+  }
+
+  @media (max-width: 420px) {
+    height: 37rem;
+  }
+
+  @media (max-width: 370px) {
+    height: 32rem;
+  }
+
+  @media (max-width: 320px) {
+    height: 27rem;
   }
 `;
 
@@ -54,14 +74,18 @@ export const AllImgsContainer = styled.div`
 
 export const DetailsContainer = styled.div`
   max-width: 50rem;
+
+  @media (max-width: 500px) {
+    margin: 0 1rem;
+  }
 `;
 
 export const ProductName = styled.h2`
   font-size: 3rem;
   font-weight: 600;
 
-  @media (max-width: 800px) {
-    font-size: 2rem;
+  @media (max-width: 500px) {
+    font-size: 2.5rem;
   }
 `;
 
@@ -69,11 +93,6 @@ export const ProductDescription = styled.p`
   font-size: 1.4rem;
   line-height: 2.5rem;
   color: var(--gray-600);
-
-  @media (max-width: 800px) {
-    font-size: 1.2rem;
-    line-height: 2rem;
-  }
 `;
 
 export const PriceContainer = styled.div`
@@ -81,6 +100,11 @@ export const PriceContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
+  }
+
+  @media (max-width: 500px) {
+    justify-content: space-between;
+    margin-top: 3rem;
   }
 `;
 
@@ -122,8 +146,9 @@ export const AddToCartContainer = styled.div`
   margin-top: 3rem;
   margin-right: 1rem;
 
-  @media (max-width: 300px) {
-    gap: 1rem;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    margin-right: 0;
   }
 `;
 
@@ -137,6 +162,7 @@ export const AddToCartButton = styled.button`
   font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
 
   display: flex;
   align-items: center;
@@ -149,11 +175,82 @@ export const AddToCartButton = styled.button`
     filter: brightness(1.1);
   }
 
-  @media (max-width: 830px) {
-    font-size: 1.4rem;
+  @media (max-width: 500px) {
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+  }
+`;
+
+export const BackImgButton = styled.button`
+  width: 5rem;
+  height: 5rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--gray-50);
+  border: none;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 1rem;
+  top: 27rem;
+
+  transition: filter .2s;
+
+  &:hover {
+    filter: brightness(0.9);
   }
 
-  @media (max-width: 300px) {
-    font-size: 1.2rem;
+  @media (max-width: 500px) {
+    display: flex;
+  }
+
+  @media (max-width: 420px) {
+    top: 25rem;
+  }
+
+  @media (max-width: 370px) {
+    top: 22rem;
+  }
+
+  @media (max-width: 320px) {
+    top: 20rem;
+  }
+`;
+
+export const NextImgButton = styled.button`
+  width: 5rem;
+  height: 5rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--gray-50);
+  border: none;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.6);
+  position: absolute;
+  right: 1rem;
+  top: 27rem;
+
+  transition: filter .2s;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  @media (max-width: 500px) {
+    display: flex;
+  }
+
+  @media (max-width: 420px) {
+    top: 25rem;
+  }
+
+  @media (max-width: 370px) {
+    top: 22rem;
+  }
+
+  @media (max-width: 320px) {
+    top: 20rem;
   }
 `;

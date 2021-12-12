@@ -30,11 +30,6 @@ export const Container = styled.div`
       filter: brightness(0.8);
     }
   `}
-
-  @media (max-width: 650px) {
-    width: 5rem;
-    height: 5rem;
-  }
 `;
 
 export const Img = styled.div`
@@ -45,8 +40,4 @@ export const Img = styled.div`
   overflow: hidden;
   background-size: cover;
   background-position: center;
-
-  @media (max-width: 650px) {
-    height: 5rem;
-  }
 `;

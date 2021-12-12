@@ -13,13 +13,17 @@ export const Container = styled.div`
   border: 0.2rem solid var(--orange-500);
   border-radius: 0.8rem;
 
-  @media (max-width: 730px) {
-    width: 8rem;
+  @media (max-width: 500px) {
+    width: 94%;
+    height: 4.5rem;
   }
 
-  @media (max-width: 300px) {
-    width: 8rem;
-    padding: 0 0.5rem;
+  @media (max-width: 380px) {
+    width: 93%;
+  }
+
+  @media (max-width: 290px) {
+    width: 91%;
   }
 `;
 

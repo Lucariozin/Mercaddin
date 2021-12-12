@@ -6,16 +6,6 @@ export const CurrentImgContainer = styled.div`
   border-radius: 1.5rem;
   margin-bottom: 11rem;
   position: relative;
-
-  @media (max-width: 650px) {
-    width: 32rem;
-    margin-bottom: -0.5rem;
-  }
-
-  @media (max-width: 400px) {
-    width: 26.2rem;
-    margin-bottom: -6.5rem;
-  }
 `;
 
 export const CurrentImg = styled.div`
@@ -26,14 +16,6 @@ export const CurrentImg = styled.div`
   overflow: hidden;
   background-size: cover;
   background-position: center;
-
-  @media (max-width: 650px) {
-    height: 32rem;
-  }
-
-  @media (max-width: 400px) {
-    height: 26.2rem;
-  }
 `;
 
 export const CloseButton = styled.button`
@@ -84,18 +66,6 @@ export const BackImg = styled.button`
   &:hover {
     filter: brightness(0.9);
   }
-
-  @media (max-width: 650px) {
-    top: 45%;
-  }
-
-  @media (max-width: 400px) {
-    width: 4rem;
-    height: 4rem;
-    padding: 0 0 0 0.1rem;
-    top: 38%;
-    left: -1.9rem;
-  }
 `;
 
 export const NextImg = styled.button`
@@ -118,17 +88,5 @@ export const NextImg = styled.button`
 
   &:hover {
     filter: brightness(0.9);
-  }
-
-  @media (max-width: 650px) {
-    top: -43%;
-  }
-
-  @media (max-width: 400px) {
-    width: 4rem;
-    height: 4rem;
-    padding: 0 0 0 0.2rem;
-    top: -35%;
-    right: -92%;
   }
 `;
