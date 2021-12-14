@@ -46,16 +46,16 @@ export const CartText = styled.span`
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 940px) {
     margin-left: 2rem;
   }
 
   @media (max-width: 630px) {
     margin-left: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
-  @media (max-width: 510px) {
+  @media (max-width: 320px) {
     display: none;
   }
 `;
@@ -66,7 +66,7 @@ export const ProductsNumberContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 510px) {
+  @media (max-width: 320px) {
     margin-left: 2rem;
   }
 `;
@@ -87,17 +87,12 @@ export const InfoContainer = styled.div`
   align-items: center;
   gap: 11.5rem;
 
-  @media (max-width: 900px) {
+  @media (max-width: 940px) {
     padding: 0 4rem 0 4rem;
     gap: 6rem;
   }
 
-  @media (max-width: 730px) {
-    padding: 0 2rem 0 2rem;
-    gap: 4rem;
-  }
-
-  @media (max-width: 370px) {
+  @media (max-width: 570px) {
     display: none;
   }
 `;
@@ -131,9 +126,11 @@ export const GoToPaymentContainer = styled.div`
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 0.3rem;
 
-  @media (max-width: 350px) {
-    height: 12rem;
-    padding: 0 1rem;
+  @media (max-width: 520px) {
+    flex-direction: column;
+    justify-content: center;
+    height: 15rem;
+    gap: 2rem;
   }
 `;
 
@@ -142,17 +139,8 @@ export const SelectAllContainer = styled.div`
   align-items: center;
   margin-left: 2rem;
 
-  @media (max-width: 980px) {
-    margin-left: 1rem;
-  }
-
-  @media (max-width: 420px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  @media (max-width: 330px) {
-    margin-left: 0;
+  @media (max-width: 520px) {
+    margin: 0 1rem;
   }
 `;
 
@@ -160,24 +148,21 @@ export const SelectAll = styled.span`
   font-size: 1.6rem;
   color: var(--gray-700);
   margin-left: 2rem;
-
-  @media (max-width: 980px) {
-    margin-left: 1rem;
-  }
-
-  @media (max-width: 420px) {
-    margin-left: 0;
-    margin-top: 1rem;
-    font-size: 1.4rem;
-  }
+  white-space: nowrap;
 `;
 
 export const TotalPriceAndPaymentButton = styled.div`
   display: flex;
   margin-left: auto;
+  align-items: center;
 
-  @media (max-width: 660px) {
+  @media (max-width: 700px) {
     flex-direction: column;
+    margin-right: 2rem;
+  }
+
+  @media (max-width: 520px) {
+    margin: 0 1rem;
   }
 `;
 
@@ -191,16 +176,12 @@ export const TotalPriceContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 660px) {
-    margin-right: 1rem;
+  @media (max-width: 770px) {
+    margin-right: 0;
   }
 
-  @media (max-width: 430px) {
-    font-size: 1.4rem;
-  }
-
-  @media (max-width: 350px) {
-    flex-direction: column;
+  @media (max-width: 700px) {
+    padding-left: 0;
   }
 `;
 
@@ -209,14 +190,6 @@ export const TotalPrice = styled.span`
   font-size: 2.5rem;
   color: var(--orange-500);
   filter: brightness(1.1);
-
-  @media (max-width: 430px) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: 350px) {
-    margin-left: 0;
-  }
 `;
 
 export const GoToPaymentButton = styled.button`
@@ -241,18 +214,8 @@ export const GoToPaymentButton = styled.button`
     filter: brightness(1.1);
   }
 
-  @media (max-width: 980px) {
-    margin: 0 3rem;
-    margin-top: 0.6rem;
-  }
-
-  @media (max-width: 430px) {
-    max-width: 13rem;
-    padding: 0 1rem;
-    margin-left: 5rem;
-  }
-
-  @media (max-width: 350px) {
-    margin: 0;
+  @media (max-width: 700px) {
+    max-width: none;
+    width: 100%;
   }
 `;
