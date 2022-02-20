@@ -12,7 +12,7 @@ Um e-commerce é um ótimo desafio para o desenvolvedor que deseja testar seus c
 > [documentação oficial](https://nextjs.org/docs/getting-started)
 
 - **TypeScript**
-> Um superset para o JavaScript, que nos permite adicionar tipagem **dinâmica** em nosso código.
+> Um superset para o JavaScript, que nos permite adicionar tipagem **stática** em nosso código.
 >
 > [documentação oficial](https://www.typescriptlang.org/docs/)
 
